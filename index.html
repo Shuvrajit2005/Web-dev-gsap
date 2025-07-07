@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modern Team Section</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <div class="container">
@@ -33,10 +31,9 @@
       </div>
     </div>
 
-    <!-- Desktop Grid -->
-    <div class="team-grid desktop-grid">
+    <!-- Team Grid -->
+    <div class="team-grid">
       <!-- Team Member Cards -->
-      <!-- Repeat these for each member -->
       <div class="team-card">
         <div class="card-content">
           <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sarah Chen" class="member-image" />
@@ -47,6 +44,7 @@
           </div>
         </div>
       </div>
+
       <div class="team-card">
         <div class="card-content">
           <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Marcus Rodriguez" class="member-image" />
@@ -57,67 +55,51 @@
           </div>
         </div>
       </div>
-      <!-- Add more cards as needed -->
-    </div>
 
-    <!-- Swiper for Mobile -->
-    <div class="swiper-container team-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="team-card">
-            <div class="card-content">
-              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" class="member-image" />
-              <div class="member-info">
-                <h3 class="member-name">Sarah Chen</h3>
-                <p class="member-role">CEO & Founder</p>
-                <div class="mentor-badge">Mentor</div>
-              </div>
-            </div>
+      <div class="team-card">
+        <div class="card-content">
+          <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Emma Thompson" class="member-image" />
+          <div class="member-info">
+            <h3 class="member-name">Emma Thompson</h3>
+            <p class="member-role">Head of Design</p>
+            <div class="mentor-badge">Mentor</div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="team-card">
-            <div class="card-content">
-              <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" class="member-image" />
-              <div class="member-info">
-                <h3 class="member-name">Marcus Rodriguez</h3>
-                <p class="member-role">CTO</p>
-                <div class="mentor-badge">Mentor</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Add more swiper-slides as needed -->
       </div>
-      <div class="swiper-pagination"></div>
+
+      <div class="team-card">
+        <div class="card-content">
+          <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400" alt="David Kim" class="member-image" />
+          <div class="member-info">
+            <h3 class="member-name">David Kim</h3>
+            <p class="member-role">VP of Engineering</p>
+            <div class="mentor-badge">Mentor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="card-content">
+          <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lisa Patel" class="member-image" />
+          <div class="member-info">
+            <h3 class="member-name">Lisa Patel</h3>
+            <p class="member-role">Head of Product</p>
+            <div class="mentor-badge">Mentor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="card-content">
+          <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400" alt="James Wilson" class="member-image" />
+          <div class="member-info">
+            <h3 class="member-name">James Wilson</h3>
+            <p class="member-role">Head of Marketing</p>
+            <div class="mentor-badge">Mentor</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    let swiper;
-
-    function initSwiper() {
-      const isMobile = window.innerWidth <= 768;
-
-      if (isMobile && !swiper) {
-        swiper = new Swiper('.team-swiper', {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      } else if (!isMobile && swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
-      }
-    }
-
-    window.addEventListener('load', initSwiper);
-    window.addEventListener('resize', initSwiper);
-  </script>
 </body>
 </html>
